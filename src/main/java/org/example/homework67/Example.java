@@ -66,8 +66,8 @@ public class Example {
         }*/
 
         // Получение кота по имени
-        TypedQuery<Cat> query = manager.createQuery("select c from Cat c where c.name = :name", Cat.class);
-        query.setParameter("name", "Мурзик");
+//        TypedQuery<Cat> query = manager.createQuery("select c from Cat c where c.name = :name", Cat.class);
+//        query.setParameter("name", "Мурзик");
 
         /*query.getResultStream()
                 .findFirst()
