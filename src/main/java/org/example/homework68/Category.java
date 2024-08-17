@@ -18,7 +18,6 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-
     @OneToMany(mappedBy = "category")
     @ToString.Exclude
     private List<Option> options;

@@ -13,6 +13,7 @@ import lombok.*;
 @ToString
 public class Value {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     @ManyToOne
