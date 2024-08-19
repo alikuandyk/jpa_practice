@@ -19,14 +19,19 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
     @Enumerated(value = EnumType.ORDINAL)
     private Status status;
+
     private String address;
+
     @Column(name = "date_order")
     private LocalDateTime dateOrder;
+
     @OneToMany(mappedBy = "order")
     @ToString.Exclude
     private List<OrderProduct> orderProducts;
