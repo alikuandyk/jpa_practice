@@ -27,7 +27,7 @@ public class Order {
     private String address;
     @Column(name = "date_order")
     private LocalDateTime dateOrder;
-    @OneToMany
+    @OneToMany(mappedBy = "order")
     @ToString.Exclude
     private List<OrderProduct> orderProducts;
 }
