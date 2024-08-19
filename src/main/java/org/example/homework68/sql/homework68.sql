@@ -1,3 +1,42 @@
+create table users
+(
+    id       serial8 primary key,
+    login    varchar   not null unique,
+    password varchar   not null,
+    name     varchar,
+    lastname varchar,
+    role     integer,
+    created  timestamp not null
+);
+
+create table orders
+(
+    id serial8 primary key,
+    user_id int8 references users(id),
+    status integer,
+    address varchar(255) not null,
+    date_order timestamp
+);
+
+create table order_products
+(
+    id serial8 primary key,
+    order_id int8 references orders(id),
+    product_id int8 references products(id),
+    quantity int8 not null
+);
+
+create table reviews
+(
+    id serial8 primary key,
+    user_id int references users(id),
+    product_id int references products(id),
+    text text,
+    grade int not null,
+    is_published boolean,
+    date_publication timestamp
+);
+
 create table categories
 (
     id   serial8 primary key,

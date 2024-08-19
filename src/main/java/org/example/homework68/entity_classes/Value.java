@@ -1,4 +1,4 @@
-package org.example.homework68;
+package org.example.homework68.entity_classes;
 
 import jakarta.persistence.*;
 import lombok.*;

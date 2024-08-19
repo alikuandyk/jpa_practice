@@ -1,6 +1,7 @@
-package org.example.homework68;
+package org.example.homework68.create;
 
 import jakarta.persistence.*;
+import org.example.homework68.entity_classes.Category;
 
 import java.util.Scanner;
 

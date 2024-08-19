@@ -1,7 +1,11 @@
-package org.example.homework68;
+package org.example.homework68.create;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Persistence;
+import org.example.homework68.entity_classes.Category;
+import org.example.homework68.entity_classes.Option;
+import org.example.homework68.entity_classes.Product;
+import org.example.homework68.entity_classes.Value;
 
 import java.util.List;
 import java.util.Scanner;

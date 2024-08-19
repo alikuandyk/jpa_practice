@@ -1,4 +1,4 @@
-package org.example.homework68;
+package org.example.homework68.entity_classes;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -6,22 +6,22 @@ import lombok.*;
 import java.util.List;
 
 @Entity
-@Table(name = "categories")
+@Table(name = "options")
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Category {
+public class Option {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-    @OneToMany(mappedBy = "category")
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private Category category;
+    @OneToMany(mappedBy = "option")
     @ToString.Exclude
-    private List<Option> options;
-    @OneToMany(mappedBy = "category")
-    @ToString.Exclude
-    private List<Product> products;
+    private List<Value> values;
 }
